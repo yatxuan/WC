@@ -1,0 +1,68 @@
+<svg width="390" height="844" viewBox="0 0 390 844" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="390" height="844" fill="#F6F8F7"/>
+  <rect x="24" y="24" width="342" height="88" rx="22" fill="#FDFEFE"/>
+  <text x="48" y="58" fill="#1D2B2E" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">智慧卫生间</text>
+  <text x="48" y="84" fill="#7B8A8E" font-family="Inter, Arial, sans-serif" font-size="12" letter-spacing="1.6">SMART RESTROOM</text>
+  <rect x="286" y="42" width="56" height="34" rx="17" fill="#EAF6F1"/>
+  <circle cx="304" cy="59" r="5" fill="#38B882"/>
+  <text x="315" y="63" fill="#2F8364" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="600">实时</text>
+  <rect x="24" y="132" width="342" height="96" rx="24" fill="#1E7161"/>
+  <path d="M46 190C88 145 148 146 190 184C230 220 286 220 344 168" stroke="#82D7C0" stroke-width="2" opacity=".35"/>
+  <text x="48" y="166" fill="#DDF5EC" font-family="Inter, Arial, sans-serif" font-size="13">推荐前往</text>
+  <text x="48" y="203" fill="white" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">2F</text>
+  <text x="107" y="202" fill="white" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="600">女厕空闲 3 个</text>
+  <rect x="268" y="166" width="58" height="30" rx="15" fill="white" opacity=".18"/>
+  <text x="284" y="186" fill="white" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">最优</text>
+  <rect x="24" y="248" width="342" height="56" rx="28" fill="#FFFFFF"/>
+  <rect x="32" y="256" width="163" height="40" rx="20" fill="#2D7A6B"/>
+  <text x="91" y="281" fill="white" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">男厕所</text>
+  <text x="250" y="281" fill="#7B8A8E" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="700">女厕所</text>
+  <rect x="24" y="324" width="102" height="78" rx="20" fill="#FFFFFF"/>
+  <circle cx="49" cy="351" r="7" fill="#35B779"/>
+  <text x="48" y="383" fill="#1D2B2E" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">2</text>
+  <text x="76" y="356" fill="#607175" font-family="Inter, Arial, sans-serif" font-size="12">空闲</text>
+  <text x="75" y="382" fill="#96A4A7" font-family="Inter, Arial, sans-serif" font-size="11">可用坑位</text>
+  <rect x="144" y="324" width="102" height="78" rx="20" fill="#FFFFFF"/>
+  <circle cx="169" cy="351" r="7" fill="#E65D5D"/>
+  <text x="168" y="383" fill="#1D2B2E" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">10</text>
+  <text x="196" y="356" fill="#607175" font-family="Inter, Arial, sans-serif" font-size="12">占用</text>
+  <text x="195" y="382" fill="#96A4A7" font-family="Inter, Arial, sans-serif" font-size="11">使用中</text>
+  <rect x="264" y="324" width="102" height="78" rx="20" fill="#FFFFFF"/>
+  <circle cx="289" cy="351" r="7" fill="#6B83D6"/>
+  <text x="288" y="383" fill="#1D2B2E" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">12</text>
+  <text x="316" y="356" fill="#607175" font-family="Inter, Arial, sans-serif" font-size="12">总数</text>
+  <text x="315" y="382" fill="#96A4A7" font-family="Inter, Arial, sans-serif" font-size="11">监测中</text>
+  <text x="24" y="443" fill="#1D2B2E" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="800">楼层状态</text>
+  <text x="272" y="443" fill="#7B8A8E" font-family="Inter, Arial, sans-serif" font-size="12">14:26:08 更新</text>
+  <g>
+    <rect x="24" y="462" width="342" height="112" rx="24" fill="#FFFFFF"/>
+    <rect x="48" y="486" width="46" height="46" rx="14" fill="#EAF6F1"/>
+    <text x="62" y="516" fill="#1E7161" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">2</text>
+    <text x="110" y="503" fill="#1D2B2E" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">2楼</text>
+    <text x="110" y="526" fill="#7B8A8E" font-family="Inter, Arial, sans-serif" font-size="12">男厕 · 3 个坑位</text>
+    <circle cx="128" cy="552" r="10" fill="#FFEFEF" stroke="#E65D5D" stroke-width="2"/>
+    <circle cx="166" cy="552" r="10" fill="#FFF7E8" stroke="#E6A23C" stroke-width="2"/>
+    <circle cx="204" cy="552" r="10" fill="#F4EFFF" stroke="#7A61D1" stroke-width="2"/>
+    <text x="288" y="520" fill="#9BA7AA" font-family="Inter, Arial, sans-serif" font-size="22">⌄</text>
+  </g>
+  <g>
+    <rect x="24" y="590" width="342" height="112" rx="24" fill="#FFFFFF"/>
+    <rect x="48" y="614" width="46" height="46" rx="14" fill="#EAF6F1"/>
+    <text x="62" y="644" fill="#1E7161" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="800">5</text>
+    <text x="110" y="631" fill="#1D2B2E" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">5楼</text>
+    <text x="110" y="654" fill="#7B8A8E" font-family="Inter, Arial, sans-serif" font-size="12">男厕 · 3 个坑位</text>
+    <circle cx="128" cy="680" r="10" fill="#EAF8F0" stroke="#35B779" stroke-width="2"/>
+    <circle cx="166" cy="680" r="10" fill="#FFEFEF" stroke="#E65D5D" stroke-width="2"/>
+    <circle cx="204" cy="680" r="10" fill="#FFF7E8" stroke="#E6A23C" stroke-width="2"/>
+    <text x="288" y="648" fill="#9BA7AA" font-family="Inter, Arial, sans-serif" font-size="22">⌄</text>
+  </g>
+  <rect x="24" y="726" width="342" height="64" rx="20" fill="#FFFFFF"/>
+  <circle cx="49" cy="758" r="6" fill="#35B779"/>
+  <text x="64" y="762" fill="#607175" font-family="Inter, Arial, sans-serif" font-size="12">空闲</text>
+  <circle cx="121" cy="758" r="6" fill="#E6A23C"/>
+  <text x="136" y="762" fill="#607175" font-family="Inter, Arial, sans-serif" font-size="12">0-8分钟</text>
+  <circle cx="217" cy="758" r="6" fill="#7A61D1"/>
+  <text x="232" y="762" fill="#607175" font-family="Inter, Arial, sans-serif" font-size="12">8-15分钟</text>
+  <circle cx="319" cy="758" r="6" fill="#E65D5D"/>
+  <text x="334" y="762" fill="#607175" font-family="Inter, Arial, sans-serif" font-size="12">长</text>
+</svg>
