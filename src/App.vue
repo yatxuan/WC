@@ -30,8 +30,21 @@
           </option>
         </select>
       </div>
-      <button :disabled="isRefreshing" @click="refreshAll">
-        {{ isRefreshing ? '刷新中' : '立即刷新' }}
+      <button
+        class="refresh-action"
+        :class="{ loading: isRefreshing }"
+        :disabled="isRefreshing"
+        :style="{ '--refresh-progress': `${refreshProgress}%` }"
+        :aria-label="isRefreshing ? '正在刷新' : '立即刷新'"
+        title="立即刷新"
+        @click="refreshAll"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20 11.2A8 8 0 0 0 6.7 5.5L5 7.2" />
+          <path d="M5 3.4v3.8h3.8" />
+          <path d="M4 12.8a8 8 0 0 0 13.3 5.7l1.7-1.7" />
+          <path d="M19 20.6v-3.8h-3.8" />
+        </svg>
       </button>
     </section>
 
@@ -146,9 +159,12 @@ const errorMessage = ref('')
 const isRefreshing = ref(false)
 const refreshSeconds = ref(Number(localStorage.getItem('refreshSeconds')) || DEFAULT_REFRESH_SECONDS)
 const floors = ref([])
+const refreshCycleStartedAt = ref(Date.now())
+const progressNow = ref(Date.now())
 
 let clockTimer = 0
 let refreshTimer = 0
+let progressTimer = 0
 let requestSeq = 0
 
 const currentSexLabel = computed(() => currentSex.value === 'male' ? '男厕' : '女厕')
@@ -170,6 +186,13 @@ const recommendText = computed(() => {
   if (!recommendFloor.value.floor) return '等待实时数据返回'
   if (recommendFloor.value.free <= 0) return `${currentSexLabel.value}当前暂无空闲坑位`
   return `${currentSexLabel.value}空闲 ${recommendFloor.value.free} 个，建议优先前往`
+})
+
+const refreshProgress = computed(() => {
+  if (isRefreshing.value) return 100
+  const duration = refreshSeconds.value * 1000
+  const elapsed = progressNow.value - refreshCycleStartedAt.value
+  return Math.max(0, Math.min(100, (elapsed / duration) * 100))
 })
 
 watch(refreshSeconds, (value) => {
@@ -211,6 +234,7 @@ async function fetchBuildInfo() {
 
 async function refreshAll() {
   const seq = ++requestSeq
+  window.clearTimeout(refreshTimer)
   isRefreshing.value = true
   errorMessage.value = ''
 
@@ -244,6 +268,7 @@ async function refreshAll() {
   } finally {
     if (seq === requestSeq) {
       isRefreshing.value = false
+      restartRefreshTimer()
     }
   }
 }
@@ -286,8 +311,12 @@ function toggleFloor(floor) {
 }
 
 function restartRefreshTimer() {
-  window.clearInterval(refreshTimer)
-  refreshTimer = window.setInterval(refreshAll, refreshSeconds.value * 1000)
+  window.clearTimeout(refreshTimer)
+  refreshCycleStartedAt.value = Date.now()
+  progressNow.value = refreshCycleStartedAt.value
+  if (!isRefreshing.value) {
+    refreshTimer = window.setTimeout(refreshAll, refreshSeconds.value * 1000)
+  }
 }
 
 function getTime() {
@@ -320,12 +349,16 @@ function pitLabel(floor, index) {
 onMounted(() => {
   updateTime()
   clockTimer = window.setInterval(updateTime, 1000)
+  progressTimer = window.setInterval(() => {
+    progressNow.value = Date.now()
+  }, 120)
   restartRefreshTimer()
   refreshAll()
 })
 
 onUnmounted(() => {
   window.clearInterval(clockTimer)
-  window.clearInterval(refreshTimer)
+  window.clearTimeout(refreshTimer)
+  window.clearInterval(progressTimer)
 })
 </script>
