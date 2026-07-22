@@ -2,7 +2,7 @@
   <main class="page-shell" :class="{ female: currentSex === 'female' }">
     <section class="hero-panel">
       <div>
-        <p class="building-name">{{ buildingName || '智慧楼宇' }}</p>
+        <!--<p class="building-name">{{ buildingName || '智慧楼宇' }}</p>-->
         <h1>智慧卫生间</h1>
         <p class="sub-title">SMART RESTROOM</p>
       </div>
