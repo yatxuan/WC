@@ -12,6 +12,8 @@
       </div>
     </section>
 
+    <div class="dashboard-layout">
+      <div class="primary-column">
     <section class="recommend-panel">
       <div>
         <span class="caption">推荐前往</span>
@@ -129,6 +131,9 @@
       <span><i class="medium"></i>8-15分钟</span>
       <span><i class="long"></i>15分钟以上</span>
     </footer>
+      </div>
+
+    </div>
   </main>
 </template>
 

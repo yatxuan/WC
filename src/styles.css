@@ -31,6 +31,10 @@ button {
   padding: 24px;
 }
 
+.dashboard-layout {
+  display: block;
+}
+
 .hero-panel,
 .stat-grid article,
 .sex-switch,
@@ -535,5 +539,52 @@ h1 {
 
   .control-panel select {
     width: min(116px, 100%);
+  }
+}
+
+@media (min-width: 760px) {
+  .page-shell {
+    width: min(calc(100% - 64px), 960px);
+    padding: 36px 0 56px;
+  }
+
+  .hero-panel {
+    padding: 26px 30px;
+  }
+
+  .dashboard-layout {
+    margin-top: 24px;
+  }
+
+  .primary-column {
+    min-width: 0;
+  }
+
+  .primary-column > :first-child {
+    margin-top: 0;
+  }
+
+  .stat-grid {
+    gap: 14px;
+  }
+
+  .floor-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 759px) {
+  .floor-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 1100px) {
+  .page-shell {
+    width: min(calc(100% - 96px), 1200px);
+  }
+
+  .floor-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
